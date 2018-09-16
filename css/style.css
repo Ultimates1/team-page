@@ -1,0 +1,102 @@
+body {
+	background-size: cover;
+	background-repeat: no-repeat, repeat;
+	background-color: rgba(18, 183, 189, 0.75);
+	background-image: url('../images/gabriele-garanzelli-529492-unsplash.jpg');
+	background-blend-mode: luminosity;
+}
+
+@font-face {
+    font-family: Nordic;
+    src: url('../fonts/Nordic\ Alternative\ Regular.ttf');
+}
+
+@font-face {
+	font-family: Argon;
+	src: url('../fonts/ArgonPERSONAL-Regular.otf') format('opentype');
+}
+
+#logo {
+
+}
+
+#home {
+	color: rgb(255, 255, 255);
+	font-size: 4em;
+	font-family: Nordic;
+}
+.panel {
+	color: rgb(255, 255, 255);
+	font-size: 2.5em;
+	font-family: Argon;
+}
+.title {
+	color: rgb(255, 255, 255);
+	font-size: 5em;
+	font-family: Argon;
+}
+
+#contacts {
+	background: rgba(0, 30, 30, .75);
+	padding: 20px;
+}
+#contacts .panel {
+	font-family: 'Times New Roman', Times, serif;
+	font-size: 1.5em;
+}
+#contacts .panel .profile .title {
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	font-family: Argon;
+}
+
+.outerCircle {
+	visibility: hidden;
+	background-color: transparent;
+	border: 8px solid rgba(255, 255, 255, 0.75);
+	opacity: .9;
+	border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	border-radius: 300px;
+	-moz-animation: spinPulse 5s infinite ease-in-out;
+	-webkit-animation: spinPulse 5s infinite ease-in-out;
+}
+
+.innerCircle {
+	visibility: hidden;
+	background-color: transparent;
+	border: 4px solid rgba(255, 241, 39, 0.75);
+	opacity: .9;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-radius: 300px;
+	-moz-animation: spinoffPulse 3s infinite linear;
+	-webkit-animation: spinoffPulse 3s infinite linear;
+}
+
+.panel:hover .outerCircle {
+	visibility: visible;
+}
+
+.panel:hover .innerCircle {
+	visibility: visible;
+}
+
+@-moz-keyframes spinPulse {
+	0% { -moz-transform:rotate(160deg); opacity:0;}
+	50% { -moz-transform:rotate(145deg); opacity:1; }
+	100% { -moz-transform:rotate(-320deg); opacity:0; }
+}
+@-moz-keyframes spinoffPulse {
+	0% { -moz-transform:rotate(0deg); }
+	100% { -moz-transform:rotate(360deg);  }
+}
+@-webkit-keyframes spinPulse {
+	0% { -webkit-transform:rotate(160deg); opacity:0;}
+	50% { -webkit-transform:rotate(145deg); opacity:1;}
+	100% { -webkit-transform:rotate(-320deg); opacity:0; }
+}
+@-webkit-keyframes spinoffPulse {
+	0% { -webkit-transform:rotate(0deg); }
+	100% { -webkit-transform:rotate(360deg); }
+}
