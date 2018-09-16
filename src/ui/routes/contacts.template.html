@@ -1,0 +1,13 @@
+<div id="contacts">
+	<div ng-repeat="contact in contacts" class="panel fade-in">
+		<div class="profile">
+			<img src={{contact.img}} alt={{contact.name}}">
+			<div class="title">{{contact.name}}</div>
+		</div>
+		<div class="info">
+			<ul>
+			<li ng-repeat="(key, value) in contact.info"><strong>{{key}}:</strong> {{value}}</li>
+			</ul>
+		</div>
+	</div>
+</div>
