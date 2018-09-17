@@ -55,10 +55,9 @@ module.exports = {
 	},
 	plugins: [
 		new CopyWebpackPlugin([
-			{ from: 'images/*.jpg' },
-			{ from: 'fonts/*.jpg' },
-			{ from: 'src/ui/*.template.html' },
-			{ from: 'src/ui/menu/*.template.html' },
+			{ from: 'images/*' },
+			{ from: 'fonts/*' },
+			{ from: 'src/ui/routes/*.template.html' },
 			{ from: 'index.html' }
 		]),
 		new MiniCssExtractPlugin({
