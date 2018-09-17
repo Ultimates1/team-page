@@ -21,28 +21,38 @@ angular
 				}
 			});
 
-			$scope.ready = function () {
-				return $scope.htmlReady;
-			};
-
 			// Fired when html ready
 			$scope.htmlLoaded = function () {
 				$scope.htmlReady = true;
 			};
 
-			// Project info
-			$scope.enterProduct = function () {
-				$location.path('/product');
+			$scope.ready = function () {
+				return $scope.htmlReady;
+			};
+
+			// Home
+			$scope.enterHome = function () {
+				$location.path('/');
 			};
 
 			// About
 			$scope.enterAbout = function () {
-				$location.path('/about');
+				document.body.className = 'fade-out ng-scope';
+				setTimeout(function() {
+					$scope.$apply(function() {
+						$location.path('/about');
+					});
+				}, 1500);
 			};
 
 			// Contacts info
 			$scope.enterContacts = function () {
-				$location.path('/contacts');
+				document.body.className = 'fade-out ng-scope';
+				setTimeout(function() {
+					$scope.$apply(function() {
+						$location.path('/contacts');
+					});
+				}, 1500);
 			};
 		}
 	]);
