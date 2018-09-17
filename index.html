@@ -4,7 +4,7 @@
 	<link href="ultimates.css" rel="stylesheet" type="text/css">
 </head>
 
-<body ng-controller="ApplicationController">
+<body ng-controller="ApplicationController" ng-init="htmlLoaded()" ng-show="ready()">
 	<div ng-view>
 	</div>
 
