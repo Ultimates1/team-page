@@ -4,7 +4,7 @@ var angular = require('angular');
 // Config
 //---------------
 angular
-	.module('ultimates-ui', ['ngRoute'])
+	.module('ultimates-ui')
 	.config([
 		'$routeProvider',
 		function config($routeProvider) {
