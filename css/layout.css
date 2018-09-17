@@ -102,9 +102,10 @@ body {
 	height: 21vw;
 }
 
-.grid-container-2-cols {
+.grid-container-2-by-2 {
 	display: grid;
 	grid-template-columns: calc(50% - 2vw) calc(50% - 2vw);
+	grid-template-rows: 1fr 1fr;
 	margin: 0px;
 	padding: 0px;
 	justify-items: center;
@@ -113,8 +114,9 @@ body {
 	align-content: stretch;
 }
 .grid-item {
-	margin: 1vw;
+	margin: 0px;
 	padding: 0px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -125,8 +127,8 @@ body {
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 85%;
-	height: 85%;
+	width: 100%;
+	height: 100%;
 	display: grid;
 	overflow-y: auto;
 }
@@ -143,8 +145,8 @@ body {
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 85%;
-	height: 95%;
+	width: 100%;
+	height: 100%;
 	overflow-y: auto;
 }
 #contacts .panel {
@@ -154,7 +156,7 @@ body {
 	margin: 1vw;
 	padding: 0px;
 	width: calc(100% - 2vw);
-	height: calc(25% - 2vw);
+	height: calc(50% - 2vw);
 }
 #contacts .panel .profile {
 	position: absolute;
@@ -162,26 +164,27 @@ body {
 	margin: auto;
 	padding: 0px;
 	text-align: center;
-	width: 40%;
-	height: 100%;
-}
-#contacts .panel .info {
-	position: absolute;
-	display: inline-block;
-	padding: 0px;
-	left: 40%;
-	width: 60%;
-	height: 100%;
+	width: 100%;
+	height: 80%;
 }
 #contacts .panel .profile img {
 	position: relative;
 	display: inline-block;
 	padding: 0px;
-	height: 80%;
 	width: auto;
+	height: 80%;
 }
 #contacts .panel .profile .title {
 	position: relative;
+	margin-top: 1vh;
+	padding: 2px;
+	height: auto;
+}
+#contacts .panel .info {
+	position: absolute;
+	display: inline-block;
 	padding: 0px;
-	height: 20%;
+	bottom: 0px;
+	width: 100%;
+	height: auto;
 }
