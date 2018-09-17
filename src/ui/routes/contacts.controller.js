@@ -29,7 +29,7 @@ angular
 				},
 				{
 					name: 'Bhargav Parekh',
-					img: '',
+					img: '../images/Bhargav.gif',
 					info: {
 						email: 'bparekh@cpp.edu',
 						github: 'https://github.com/nambvp03'
@@ -37,7 +37,7 @@ angular
 				},
 				{
 					name: 'Darsh Thumar',
-					img: '',
+					img: '../images/darsh.gif',
 					info: {
 						email: 'dvthumar@cpp.edu',
 						github: 'https://github.com/dvthumar'
@@ -55,7 +55,7 @@ angular
 			};
 
 			$scope.closePanel = function () {
-				document.getElementById('contacts').className = 'fade-out ng-scope';
+				document.getElementById('contacts').className = 'fade-out grid-container-2-by-2 ng-scope';
 				setTimeout(function() {
 					$scope.$apply(function() {
 						$scope.$parent.enterHome();
