@@ -1,5 +1,6 @@
-<div id="contacts">
-	<div ng-repeat="contact in contacts" class="panel fade-in">
+<div id="contacts" class="fade-in" ng-controller="ContactsController" ng-init="htmlLoaded()" ng-show="ready()">
+	<div class="close-button" ng-click="closePanel()"></div>
+	<div ng-repeat="contact in contacts" class="panel">
 		<div class="profile">
 			<img src={{contact.img}} alt={{contact.name}}">
 			<div class="title">{{contact.name}}</div>
