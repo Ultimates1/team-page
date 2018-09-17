@@ -15,32 +15,32 @@ angular
 					name: 'Mi Nguyen',
 					img: '../images/minguyen.png',
 					info: {
-						email: '',
-						github: ''
+						email: 'minguyen@cpp.edu',
+						github: 'https://github.com/yamiryu'
 					}
 				},
 				{
-					name: 'Rafi',
+					name: 'Rafi Meguerdijian',
 					img: '',
 					info: {
-						email: '',
-						github: ''
+						email: 'meguerdijian@cpp.edu',
+						github: 'https://github.com/RMCS5800'
 					}
 				},
 				{
-					name: 'B',
+					name: 'Bhargav Parekh',
 					img: '',
 					info: {
-						email: '',
-						github: ''
+						email: 'bparekh@cpp.edu',
+						github: 'https://github.com/nambvp03'
 					}
 				},
 				{
-					name: 'T',
+					name: 'Darsh Thumar',
 					img: '',
 					info: {
-						email: '',
-						github: ''
+						email: 'dvthumar@cpp.edu',
+						github: 'https://github.com/dvthumar'
 					}
 				}
 			];
@@ -53,5 +53,14 @@ angular
 			$scope.htmlLoaded = function () {
 				$scope.htmlReady = true;
 			};
+
+			$scope.closePanel = function () {
+				document.getElementById('contacts').className = 'fade-out ng-scope';
+				setTimeout(function() {
+					$scope.$apply(function() {
+						$scope.$parent.enterHome();
+					});
+				}, 1500);
+			}
 		}
 	]);
