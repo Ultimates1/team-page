@@ -6,6 +6,29 @@ body {
 	background-blend-mode: luminosity;
 }
 
+a {
+   text-decoration: none;
+}
+
+a.underlined {
+   text-decoration: underline;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+.fade-out {
+	opacity: 1;
+	animation-name: fadeOutOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 2s;
+}
+
 @font-face {
     font-family: Nordic;
     src: url('../fonts/Nordic\ Alternative\ Regular.ttf');
@@ -17,37 +40,65 @@ body {
 }
 
 #logo {
-
+	background-size: 100%;
+	background-image: url('../images/logo.png');
 }
 
-#home {
-	color: rgb(255, 255, 255);
-	font-size: 4em;
-	font-family: Nordic;
+.close-button {
+	background-size: 100%;
+	background-image: url('../images/button-close.png');
 }
-.panel {
+
+.grid-item {
 	color: rgb(255, 255, 255);
-	font-size: 2.5em;
-	font-family: Argon;
 }
+
 .title {
 	color: rgb(255, 255, 255);
-	font-size: 5em;
+	font-size: 2.5vw;
 	font-family: Argon;
+}
+
+#home .title {
+	color: rgb(255, 255, 255);
+	font-size: 7vw;
+	font-family: Nordic;
+}
+
+.panel {
+	color: rgb(255, 255, 255);
+	font-size: 4vw;
+	font-family: Argon;
+}
+
+
+#about {
+	background: rgba(0, 30, 30, .75);
+	padding: 0px;
+}
+#about .title {
+	font-family: Argon;
+	font-size: 2.5vw;
+}
+#about .grid-item {
+	cursor: pointer;
 }
 
 #contacts {
 	background: rgba(0, 30, 30, .75);
-	padding: 20px;
+	padding: 0px;
 }
 #contacts .panel {
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 1.5em;
+	font-size: 2vw;
 }
 #contacts .panel .profile .title {
 	color: rgb(255, 255, 255);
-	font-size: 1em;
+	font-size: 2vw;
 	font-family: Argon;
+}
+#contacts ul {
+	list-style-type: circle;
 }
 
 .outerCircle {
@@ -57,7 +108,8 @@ body {
 	opacity: .9;
 	border-right: 8px solid transparent;
 	border-left: 8px solid transparent;
-	border-radius: 300px;
+	border-radius: 23vw;
+	animation: spinPulse 5s infinite ease-in-out;
 	-moz-animation: spinPulse 5s infinite ease-in-out;
 	-webkit-animation: spinPulse 5s infinite ease-in-out;
 }
@@ -69,7 +121,8 @@ body {
 	opacity: .9;
 	border-left: 4px solid transparent;
 	border-right: 4px solid transparent;
-	border-radius: 300px;
+	border-radius: 21vw;
+	animation: spinoffPulse 3s infinite linear;
 	-moz-animation: spinoffPulse 3s infinite linear;
 	-webkit-animation: spinoffPulse 3s infinite linear;
 }
@@ -82,14 +135,51 @@ body {
 	visibility: visible;
 }
 
+@keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes fadeOutOpacity {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@keyframes spinPulse {
+	0% { transform:rotate(160deg); opacity:0;}
+	50% { transform:rotate(145deg); opacity:1; }
+	100% { transform:rotate(-320deg); opacity:0; }
+}
+@keyframes spinoffPulse {
+	0% { transform:rotate(0deg); opacity:0;}
+	50% { transform:rotate(180deg); opacity:1; }
+	100% { transform:rotate(360deg); opacity:0; }
+}
+
+@-moz-keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-moz-keyframes fadeOutOpacity {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
 @-moz-keyframes spinPulse {
 	0% { -moz-transform:rotate(160deg); opacity:0;}
 	50% { -moz-transform:rotate(145deg); opacity:1; }
 	100% { -moz-transform:rotate(-320deg); opacity:0; }
 }
 @-moz-keyframes spinoffPulse {
-	0% { -moz-transform:rotate(0deg); }
-	100% { -moz-transform:rotate(360deg);  }
+	0% { -moz-transform:rotate(0deg); opacity:0;}
+	50% { -moz-transform:rotate(180deg); opacity:1; }
+	100% { -moz-transform:rotate(360deg); opacity:0; }
+}
+
+@-webkit-keyframes fadeInOpacity {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@-webkit-keyframes fadeOutOpacity {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
 }
 @-webkit-keyframes spinPulse {
 	0% { -webkit-transform:rotate(160deg); opacity:0;}
@@ -97,6 +187,7 @@ body {
 	100% { -webkit-transform:rotate(-320deg); opacity:0; }
 }
 @-webkit-keyframes spinoffPulse {
-	0% { -webkit-transform:rotate(0deg); }
-	100% { -webkit-transform:rotate(360deg); }
+	0% { -webkit-transform:rotate(0deg); opacity:0;}
+	50% { -webkit-transform:rotate(180deg); opacity:1; }
+	100% { -webkit-transform:rotate(360deg); opacity:0; }
 }
