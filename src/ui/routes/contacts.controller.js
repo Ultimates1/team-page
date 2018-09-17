@@ -21,7 +21,7 @@ angular
 				},
 				{
 					name: 'Rafi Meguerdijian',
-					img: '',
+					img: '../images/rafi.jpg',
 					info: {
 						email: 'meguerdijian@cpp.edu',
 						github: 'https://github.com/RMCS5800'
