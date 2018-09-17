@@ -13,7 +13,7 @@ angular
 			$scope.contacts = [
 				{
 					name: 'Mi Nguyen',
-					img: 'The_Ultimates/images/minguyen.png',
+					img: 'images/minguyen.png',
 					info: {
 						email: 'minguyen@cpp.edu',
 						github: 'https://github.com/yamiryu'
@@ -21,7 +21,7 @@ angular
 				},
 				{
 					name: 'Rafi Meguerdijian',
-					img: 'The_Ultimates/images/rafi.jpg',
+					img: 'images/rafi.jpg',
 					info: {
 						email: 'meguerdijian@cpp.edu',
 						github: 'https://github.com/RMCS5800'
@@ -29,7 +29,7 @@ angular
 				},
 				{
 					name: 'Bhargav Parekh',
-					img: 'The_Ultimates/images/Bhargav.gif',
+					img: 'images/Bhargav.gif',
 					info: {
 						email: 'bparekh@cpp.edu',
 						github: 'https://github.com/nambvp03'
@@ -37,7 +37,7 @@ angular
 				},
 				{
 					name: 'Darsh Thumar',
-					img: 'The_Ultimates/images/darsh.gif',
+					img: 'images/darsh.gif',
 					info: {
 						email: 'dvthumar@cpp.edu',
 						github: 'https://github.com/dvthumar'
