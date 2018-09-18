@@ -30,8 +30,8 @@ a.underlined {
 }
 
 @font-face {
-    font-family: Nordic;
-    src: url('../fonts/Nordic\ Alternative\ Regular.ttf');
+    font-family: Minstrel;
+    src: url('../fonts/MINSPSW_.ttf');
 }
 
 @font-face {
@@ -60,9 +60,9 @@ a.underlined {
 }
 
 #home .title {
-	color: rgb(255, 255, 255);
-	font-size: 7vw;
-	font-family: Nordic;
+	color: rgba(255, 255, 255, 0.80);
+	font-size: 8vw;
+	font-family: Minstrel;
 }
 
 .panel {
