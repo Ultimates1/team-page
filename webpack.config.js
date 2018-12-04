@@ -1,15 +1,13 @@
-const path = require('path')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-
+const path = require('path');
+console.log(__dirname);
 
 module.exports = {
 	entry: ['babel-polyfill', './src/index.js'],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'ultimates.js',
-		chunkFilename: '[name].ultimates.js'
+		path: path.resolve(__dirname, 'www'),
+		filename: 'index.js',
+		chunkFilename: '[name].js',
+		publicPath: '/The_Ultimates/www'
 	},
 	optimization: {
 		namedChunks: true, // Allow for naming chunks (disabled by default in production mode)
@@ -17,8 +15,8 @@ module.exports = {
 			cacheGroups: {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
-					chunks: "initial",
-					name: "vendors"
+					chunks: 'initial',
+					name: 'vendors'
 				}
 			}
 		}
@@ -37,7 +35,6 @@ module.exports = {
 		{
 			test: /\.css$/,
 			use: [
-				MiniCssExtractPlugin.loader,
 				'css-loader'
 			]
 		},
@@ -53,19 +50,7 @@ module.exports = {
 			]
 		}]
 	},
-	plugins: [
-		new CopyWebpackPlugin([
-			{ from: 'images/*' },
-			{ from: 'fonts/*' },
-			{ from: 'src/ui/routes/*.template.html' },
-			{ from: 'index.html' }
-		]),
-		new MiniCssExtractPlugin({
-			filename: "ultimates.css",
-			chunkFilename: "[id].css"
-		})
-	],
 	resolve: {
 		symlinks: false
 	}
-}
+};

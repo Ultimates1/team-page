@@ -1,9 +1,8 @@
 var angular = require('angular');
 require('angular-route');
+require('angular-ui-carousel');
 
-//---------------
-// Module UI
-//---------------
-angular.module("ultimates-ui", [
-	'ngRoute'
+angular.module('ultimates-ui', [
+	'ngRoute',
+	'ui.carousel'
 ]);

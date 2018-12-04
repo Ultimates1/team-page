@@ -2,3 +2,5 @@ node_modules
 package-lock.json
 dist
 .DS_Store
+**/www/index.js
+**/www/vendors.js

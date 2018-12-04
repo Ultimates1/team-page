@@ -38,8 +38,8 @@ angular
 			// About
 			$scope.enterAbout = function () {
 				document.body.className = 'fade-out ng-scope';
-				setTimeout(function() {
-					$scope.$apply(function() {
+				setTimeout(function () {
+					$scope.$apply(function () {
 						$location.path('/about');
 					});
 				}, 1500);
@@ -48,8 +48,8 @@ angular
 			// Contacts info
 			$scope.enterContacts = function () {
 				document.body.className = 'fade-out ng-scope';
-				setTimeout(function() {
-					$scope.$apply(function() {
+				setTimeout(function () {
+					$scope.$apply(function () {
 						$location.path('/contacts');
 					});
 				}, 1500);

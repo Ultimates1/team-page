@@ -1,7 +1,3 @@
-;// Import css
-import '../css/style.css';
-import '../css/layout.css';
-
 // Import Angular files
 import './ui/app.module';
 import './ui/app.config';

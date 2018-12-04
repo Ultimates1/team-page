@@ -56,8 +56,8 @@ angular
 
 			$scope.closePanel = function () {
 				document.getElementById('contacts').className = 'fade-out grid-container-2-by-2 ng-scope';
-				setTimeout(function() {
-					$scope.$apply(function() {
+				setTimeout(function () {
+					$scope.$apply(function () {
 						$scope.$parent.enterHome();
 					});
 				}, 1500);

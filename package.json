@@ -33,6 +33,7 @@
 	"dependencies": {
 		"angular": "^1.5.8",
 		"angular-route": "^1.5.8",
+		"angular-ui-carousel": "^0.1.10",
 		"babel-polyfill": "^6.26.0"
 	}
 }
