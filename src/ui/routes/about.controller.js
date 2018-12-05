@@ -33,12 +33,32 @@ angular
 
 			$scope.slides = [
 				{
-					title: "1 title",
-					image: 'https://images.unsplash.com/photo-1540205082-e56e180508e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+					title: "Access different functionalities",
+					image: 'assets/images/dashboard.png',
 				},
 				{
-					title: "2 title",
-					image: 'https://images.unsplash.com/photo-1524275804141-5e9f2bc5a71d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+					title: "Manage your projects",
+					image: 'assets/images/management.png',
+				},
+				{
+					title: "Create new projects",
+					image: 'assets/images/project_create.png'
+				},
+				{
+					title: "Manage your leave requests",
+					image: 'assets/images/leave.png'
+				},
+				{
+					title: "Manage employees' leave requests",
+					image: 'assets/images/workflow.png'
+				},
+				{
+					title: "Generate documents with your templates",
+					image: 'assets/images/documents.png'
+				},
+				{
+					title: "Email notifications for new events",
+					image: 'assets/images/email.png'
 				}
 			];
 		}

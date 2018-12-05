@@ -10,10 +10,6 @@ angular
 		function config($routeProvider) {
 			// Configure routes
 			$routeProvider
-				.when('/product', {
-					templateUrl: 'src/ui/routes/product.template.html',
-					controller: 'ProductController'
-				})
 				.when('/about', {
 					templateUrl: 'src/ui/routes/about.template.html',
 					controller: 'AboutController'
